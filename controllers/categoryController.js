@@ -1,4 +1,4 @@
-import db from '../../noon/config/db.js';
+import db from '../config/db.js';
 
 
 export const getCategorie = async (req, res) => {
