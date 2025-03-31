@@ -1,8 +1,7 @@
 import express from 'express';
-// import db from '../noon/config/db.js';
 import db from './config/db.js';
-import productRoutes from '../noon/routes/productRoutes.js';
-import categoryRoute from '../noon/routes/categoryRoute.js';
+import productRoutes from './routes/productRoutes.js';
+import categoryRoute from './routes/categoryRoute.js';
 import cors from 'cors';
 
 
@@ -31,7 +30,7 @@ db.query('SELECT 1').then(() => {
     app.listen(PORT, () => {
         console.log(`server listening on port no ${PORT}`);
     });
-    
+
 
 
 }).catch((error) => {
