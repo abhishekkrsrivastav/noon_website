@@ -1,5 +1,6 @@
 import express from 'express';
 import db from './config/db.js';
+import headerRoute from './routes/headerRoute.js'
 import productRoutes from './routes/productRoutes.js';
 import categoryRoute from './routes/categoryRoute.js';
 import cors from 'cors';
@@ -11,6 +12,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// routes for noon header
+app.use('/noon', headerRoute);
 
 // routes for category
 app.use('/noon', categoryRoute);
