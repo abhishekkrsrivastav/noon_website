@@ -10,6 +10,13 @@ const app = express();
 
 // middleware
 app.use(cors());
+
+const corsOptions = {
+    origin: ['http://localhost:3000','https://noon-website.onrender.com'],  
+    credentials: true
+  };
+  app.use(cors(corsOptions)); 
+
 app.use(express.json());
 
 // routes for noon header
